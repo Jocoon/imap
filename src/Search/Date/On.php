@@ -14,6 +14,7 @@ final class On extends AbstractDate
 {
     /**
      * Returns the keyword that the condition represents.
+     * @return string
      */
     protected function getKeyword(): string
     {

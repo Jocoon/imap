@@ -13,6 +13,7 @@ final class Attachment extends AbstractPart implements AttachmentInterface
 {
     /**
      * Get attachment filename.
+     * @return string|null
      */
     public function getFilename(): ?string
     {
@@ -37,6 +38,7 @@ final class Attachment extends AbstractPart implements AttachmentInterface
 
     /**
      * Is this attachment also an Embedded Message?
+     * @return bool
      */
     public function isEmbeddedMessage(): bool
     {
@@ -47,6 +49,7 @@ final class Attachment extends AbstractPart implements AttachmentInterface
      * Return embedded message.
      *
      * @throws NotEmbeddedMessageException
+     * @return EmbeddedMessageInterface
      */
     public function getEmbeddedMessage(): EmbeddedMessageInterface
     {

@@ -157,6 +157,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Get message number (from headers).
+     * @return int
      */
     final public function getNumber(): int
     {
@@ -167,6 +168,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Ensure message exists.
+     * @return void
      */
     protected function assertMessageExists(int $messageNumber): void
     {
@@ -174,6 +176,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * @param \stdClass $structure Part structure
+     * @return void
      */
     final protected function setStructure(\stdClass $structure): void
     {
@@ -182,6 +185,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Part structure.
+     * @return \stdClass
      */
     final public function getStructure(): \stdClass
     {
@@ -192,6 +196,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Lazy load structure.
+     * @return void
      */
     protected function lazyLoadStructure(): void
     {
@@ -199,6 +204,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Part parameters.
+     * @return Parameters
      */
     final public function getParameters(): Parameters
     {
@@ -209,6 +215,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Part charset.
+     * @return string|null
      */
     final public function getCharset(): ?string
     {
@@ -219,6 +226,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Part type.
+     * @return string|null
      */
     final public function getType(): ?string
     {
@@ -229,6 +237,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Part subtype.
+     * @return string|null
      */
     final public function getSubtype(): ?string
     {
@@ -239,6 +248,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Part encoding.
+     * @return string|null
      */
     final public function getEncoding(): ?string
     {
@@ -249,6 +259,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Part disposition.
+     * @return string|null
      */
     final public function getDisposition(): ?string
     {
@@ -259,6 +270,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Part description.
+     * @return string|null
      */
     final public function getDescription(): ?string
     {
@@ -281,6 +293,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Part lines.
+     * @return string|null
      */
     final public function getLines(): ?string
     {
@@ -291,6 +304,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Get raw part content.
+     * @return string
      */
     final public function getContent(): string
     {
@@ -303,6 +317,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Get content part number.
+     * @return string
      */
     protected function getContentPartNumber(): string
     {
@@ -311,6 +326,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Get part number.
+     * @return string
      */
     final public function getPartNumber(): string
     {
@@ -319,6 +335,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Get decoded part content.
+     * @return string
      */
     final public function getDecodedContent(): string
     {
@@ -352,6 +369,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Get raw message content.
+     * @return string
      */
     final protected function doGetContent(string $partNumber): string
     {
@@ -459,6 +477,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Parse part structure.
+     * @return void
      */
     private function lazyParseStructure(): void
     {
@@ -522,6 +541,7 @@ abstract class AbstractPart implements PartInterface
 
     /**
      * Check if the given part is an attachment.
+     * @return bool
      */
     private static function isAttachment(\stdClass $part): bool
     {

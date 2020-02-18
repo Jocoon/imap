@@ -23,6 +23,7 @@ final class EmbeddedMessage extends AbstractMessage implements EmbeddedMessageIn
 
     /**
      * Get message headers.
+     * @return Headers
      */
     public function getHeaders(): Headers
     {
@@ -35,6 +36,7 @@ final class EmbeddedMessage extends AbstractMessage implements EmbeddedMessageIn
 
     /**
      * Get raw message headers.
+     * @return string
      */
     public function getRawHeaders(): string
     {
@@ -62,6 +64,7 @@ final class EmbeddedMessage extends AbstractMessage implements EmbeddedMessageIn
 
     /**
      * Get content part number.
+     * @return string
      */
     protected function getContentPartNumber(): string
     {

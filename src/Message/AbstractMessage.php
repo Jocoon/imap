@@ -15,6 +15,7 @@ abstract class AbstractMessage extends AbstractPart
 
     /**
      * Get message headers.
+     * @return Headers
      */
     abstract public function getHeaders(): Headers;
 
@@ -22,6 +23,7 @@ abstract class AbstractMessage extends AbstractPart
      * Get message id.
      *
      * A unique message id in the form <...>
+     * @return string|null
      */
     final public function getId(): ?string
     {
@@ -30,6 +32,7 @@ abstract class AbstractMessage extends AbstractPart
 
     /**
      * Get message sender (from headers).
+     * @return EmailAddress|null
      */
     final public function getFrom(): ?EmailAddress
     {
@@ -100,6 +103,7 @@ abstract class AbstractMessage extends AbstractPart
 
     /**
      * Get date (from headers).
+     * @return \DateTimeImmutable|null
      */
     final public function getDate(): ?\DateTimeImmutable
     {
@@ -141,6 +145,7 @@ abstract class AbstractMessage extends AbstractPart
 
     /**
      * Get message subject (from headers).
+     * @return string|null
      */
     final public function getSubject(): ?string
     {
@@ -149,6 +154,7 @@ abstract class AbstractMessage extends AbstractPart
 
     /**
      * Get message In-Reply-To (from headers).
+     * @return array
      */
     final public function getInReplyTo(): array
     {
@@ -159,6 +165,7 @@ abstract class AbstractMessage extends AbstractPart
 
     /**
      * Get message References (from headers).
+     * @return array
      */
     final public function getReferences(): array
     {
@@ -169,6 +176,7 @@ abstract class AbstractMessage extends AbstractPart
 
     /**
      * Get body HTML.
+     * @return string|null
      */
     final public function getBodyHtml(): ?string
     {
@@ -189,6 +197,7 @@ abstract class AbstractMessage extends AbstractPart
 
     /**
      * Get body text.
+     * @return string|null
      */
     final public function getBodyText(): ?string
     {
@@ -238,6 +247,7 @@ abstract class AbstractMessage extends AbstractPart
 
     /**
      * Does this message have attachments?
+     * @return bool
      */
     final public function hasAttachments(): bool
     {

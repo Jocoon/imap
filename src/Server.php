@@ -80,6 +80,7 @@ final class Server implements ServerInterface
      * @param string $password Password
      *
      * @throws AuthenticationFailedException
+     * @return ConnectionInterface
      */
     public function authenticate(string $username, string $password): ConnectionInterface
     {
@@ -133,6 +134,7 @@ final class Server implements ServerInterface
 
     /**
      * Glues hostname, port and flags and returns result.
+     * @return string
      */
     private function getServerString(): string
     {

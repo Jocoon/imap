@@ -43,6 +43,7 @@ class Parameters extends \ArrayIterator
 
     /**
      * Decode value.
+     * @return string
      */
     final protected function decode(string $value): string
     {

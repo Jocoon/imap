@@ -50,6 +50,7 @@ final class Connection implements ConnectionInterface
 
     /**
      * Get IMAP resource.
+     * @return ImapResourceInterface
      */
     public function getResource(): ImapResourceInterface
     {
@@ -58,6 +59,7 @@ final class Connection implements ConnectionInterface
 
     /**
      * Delete all messages marked for deletion.
+     * @return bool
      */
     public function expunge(): bool
     {
@@ -66,6 +68,7 @@ final class Connection implements ConnectionInterface
 
     /**
      * Close connection.
+     * @return bool
      */
     public function close(int $flag = 0): bool
     {
@@ -76,6 +79,7 @@ final class Connection implements ConnectionInterface
 
     /**
      * Get Mailbox quota.
+     * @return array
      */
     public function getQuota(string $root = 'INBOX'): array
     {
@@ -129,6 +133,7 @@ final class Connection implements ConnectionInterface
      * Check that a mailbox with the given name exists.
      *
      * @param string $name Mailbox name
+     * @return bool
      */
     public function hasMailbox(string $name): bool
     {
@@ -143,6 +148,7 @@ final class Connection implements ConnectionInterface
      * @param string $name Mailbox name
      *
      * @throws MailboxDoesNotExistException If mailbox does not exist
+     * @return MailboxInterface
      */
     public function getMailbox(string $name): MailboxInterface
     {
@@ -173,6 +179,7 @@ final class Connection implements ConnectionInterface
      * Check if the connection is still active.
      *
      * @throws InvalidResourceException If connection was closed
+     * @return bool
      */
     public function ping(): bool
     {
@@ -183,6 +190,7 @@ final class Connection implements ConnectionInterface
      * Create mailbox.
      *
      * @throws CreateMailboxException
+     * @return MailboxInterface
      */
     public function createMailbox(string $name): MailboxInterface
     {
@@ -200,6 +208,7 @@ final class Connection implements ConnectionInterface
      * Create mailbox.
      *
      * @throws DeleteMailboxException
+     * @return void
      */
     public function deleteMailbox(MailboxInterface $mailbox): void
     {
@@ -213,6 +222,7 @@ final class Connection implements ConnectionInterface
 
     /**
      * Get mailbox names.
+     * @return void
      */
     private function initMailboxNames(): void
     {

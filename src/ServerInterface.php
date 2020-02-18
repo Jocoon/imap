@@ -14,6 +14,7 @@ interface ServerInterface
      *
      * @param string $username Username
      * @param string $password Password
+     * @return ConnectionInterface
      */
     public function authenticate(string $username, string $password): ConnectionInterface;
 }

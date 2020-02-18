@@ -50,6 +50,7 @@ final class EmailAddress
 
     /**
      * Returns address with person name.
+     * @return string
      */
     public function getFullAddress(): string
     {
@@ -61,6 +62,9 @@ final class EmailAddress
         return $address;
     }
 
+    /**
+     * @return string
+     */
     public function getMailbox(): string
     {
         return $this->mailbox;
