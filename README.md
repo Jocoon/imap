@@ -1,10 +1,17 @@
+# Important Notice
+
+This repository is a forked version of the original, re-adding some PHPDoc which was removed due to being 'redundant'.
+This causes trouble in some IDEs and for completeness, this has been re-added in this fork.
+CI has been re-named to use our organization's namespace/this repository, but the classes still stay in the original namespace for compatibility.
+Some CI services might not be implemented.
+
 # IMAP library
 
-[![Build Status](https://travis-ci.org/ddeboer/imap.svg?branch=master)](https://travis-ci.org/ddeboer/imap)
-[![Code Coverage](https://scrutinizer-ci.com/g/ddeboer/imap/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ddeboer/imap/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ddeboer/imap/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ddeboer/imap/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/ddeboer/imap/v/stable.svg)](https://packagist.org/packages/ddeboer/imap)
-[![Total Downloads](https://poser.pugx.org/ddeboer/imap/downloads.png)](https://packagist.org/packages/ddeboer/imap)
+[![Build Status](https://travis-ci.org/jocoon/imap.svg?branch=master)](https://travis-ci.org/jocoon/imap)
+[![Code Coverage](https://scrutinizer-ci.com/g/jocoon/imap/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/jocoon/imap/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jocoon/imap/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jocoon/imap/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/jocoon/imap/v/stable.svg)](https://packagist.org/packages/jocoon/imap)
+[![Total Downloads](https://poser.pugx.org/jocoon/imap/downloads.png)](https://packagist.org/packages/jocoon/imap)
 
 A PHP 7.2+ library to read and process e-mails over IMAP.
 
@@ -32,14 +39,14 @@ This library requires [IMAP](https://secure.php.net/manual/en/book.imap.php),
 
 ## Feature Requests
 
-[![Feature Requests](https://feathub.com/ddeboer/imap?format=svg)](https://feathub.com/ddeboer/imap)
+[![Feature Requests](https://feathub.com/jocoon/imap?format=svg)](https://feathub.com/jocoon/imap)
 
 ## Installation
 
 The recommended way to install the IMAP library is through [Composer](https://getcomposer.org):
 
 ```bash
-$ composer require ddeboer/imap
+$ composer require jocoon/imap
 ```
 
 This command requires you to have Composer installed globally, as explained
@@ -310,7 +317,7 @@ mocked workflow.
 
 ## Running the Tests
 
-This library is functionally tested on [Travis CI](https://travis-ci.org/ddeboer/imap)
+This library is functionally tested on [Travis CI](https://travis-ci.org/jocoon/imap)
 against a local Dovecot server.
 
 If you have your own IMAP (test) account, you can run the tests locally by
